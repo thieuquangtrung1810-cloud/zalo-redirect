@@ -2,7 +2,7 @@
 
 export default async function handler(req, res) {
   // 1. Link Google Apps Script của bạn (Thay link chuẩn vào đây)
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxBX6WuBk2T-0BT8r9ZrVwNa9N-fPkEvBPN802qkulK9TlehKv2nkeS_mPwujVqs_FftQ/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwZ7nB-1J1U-AV7OnflXPL9BHZpXX6vWekftFTs2tSs5Ikwg6sU-clEQtVNQQ4wPKowSg/exec";
 
   // 2. Chỉ xử lý khi Zalo gửi lệnh POST
   if (req.method === 'POST') {
