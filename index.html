@@ -2,48 +2,28 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="zalo-platform-site-verification" content="QCI5AhBe93T7bwiBbkSy8nFeYmN_dbnSDp8o" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đang chuyển hướng...</title>
+    <title>Đang kết nối...</title>
     <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: sans-serif;
-            flex-direction: column;
-        }
-        .loader {
-            border: 4px solid #333;
-            border-top: 4px solid #3498db;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin-bottom: 15px;
-        }
+        body { background-color: #000; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; margin: 0; }
+        .loader { border: 3px solid #333; border-top: 3px solid #3498db; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin-bottom: 20px; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        p { color: #888; font-size: 14px; }
     </style>
     <script>
-        // ============================================================
-        // THAY LINK WEB APP GOOGLE CỦA BẠN VÀO DƯỚI ĐÂY
-        // (Lưu ý: Chỉ lấy link gốc, KHÔNG kèm ?uid=...)
+        // LINK GOOGLE WEB APP CỦA BẠN
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzv3qN2sbh-cRQf3PhWbjbgtX4nDkZKaJXzdxa9DQy5lx6KGtwBQbrDps6-lEF5HVdh4A/exec";
-        // ============================================================
 
         window.onload = function() {
-            // Lấy toàn bộ tham số trên thanh địa chỉ (ví dụ: ?uid=123&topic=abc)
             const params = window.location.search;
-            
-            // Ghép vào link Google và chuyển hướng
             window.location.href = GOOGLE_SCRIPT_URL + params;
         };
     </script>
 </head>
 <body>
     <div class="loader"></div>
-    <p>Đang kết nối đến Trạm Y Tế...</p>
+    <p>Đang chuyển hướng đến Form đăng ký...</p>
 </body>
 </html>
