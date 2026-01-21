@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đang chuyển hướng...</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: sans-serif;
+            flex-direction: column;
+        }
+        .loader {
+            border: 4px solid #333;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    <script>
+        // ============================================================
+        // THAY LINK WEB APP GOOGLE CỦA BẠN VÀO DƯỚI ĐÂY
+        // (Lưu ý: Chỉ lấy link gốc, KHÔNG kèm ?uid=...)
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzv3qN2sbh-cRQf3PhWbjbgtX4nDkZKaJXzdxa9DQy5lx6KGtwBQbrDps6-lEF5HVdh4A/exec";
+        // ============================================================
+
+        window.onload = function() {
+            // Lấy toàn bộ tham số trên thanh địa chỉ (ví dụ: ?uid=123&topic=abc)
+            const params = window.location.search;
+            
+            // Ghép vào link Google và chuyển hướng
+            window.location.href = GOOGLE_SCRIPT_URL + params;
+        };
+    </script>
+</head>
+<body>
+    <div class="loader"></div>
+    <p>Đang kết nối đến Trạm Y Tế...</p>
+</body>
+</html>
